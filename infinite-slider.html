@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>infinite-slider</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: azure;
+        }
+        .logos{
+            overflow: hidden;
+            padding: 50px 0 ;
+            /* padding: 20px; */
+            background: white;
+            white-space: nowrap;
+            position: relative;
+        }
+        .logos::before, .logos::after{
+            position: absolute;
+            top: 0;
+            
+            width: 200px;
+            height: 100%;
+            content: "";
+            z-index: 2;
+        }
+        .logos::before{
+            left: 0;
+            background:linear-gradient(to left, rgba(255,255,255,0),white);
+            
+        }
+        .logos::after{
+            right: 0;
+            background:linear-gradient(to right, rgba(255,255,255,0),white);
+            
+        }
+        @keyframes slide{
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(-100%);
+            }
+            
+        }
+
+        .logos:hover .logos-slide{
+            animation-play-state: paused;
+        }
+        .logos-slide{
+            display: inline-block;
+            animation: slide 30s linear infinite;
+        }
+        .logos-slide img{
+            height: 80px;
+            padding: 10px 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logos">
+        <div class="logos-slide">
+            <img src="acrobat.svg" alt="">
+            <img src="adobe.svg" alt="">
+            <img src="amd.svg" alt="">
+            <img src="apple.svg" alt="">
+            <img src="asus.svg" alt="">
+            <img src="huawei.svg" alt="">
+            <img src="ibm.svg" alt="">
+            <img src="intel.svg" alt="">
+            <img src="microsoft.svg" alt="">
+            <img src="nvidia.svg" alt="">
+            <img src="oracle.svg" alt="">
+            <img src="samsung.svg" alt="">
+            <img src="sap.svg" alt="">
+            <img src="technology.svg" alt="">
+            <img src="tencent.svg" alt="">
+            <img src="unity.svg" alt="">
+        </div>
+        <div class="logos-slide">
+            <img src="acrobat.svg" alt="">
+            <img src="adobe.svg" alt="">
+            <img src="amd.svg" alt="">
+            <img src="apple.svg" alt="">
+            <img src="asus.svg" alt="">
+            <img src="huawei.svg" alt="">
+            <img src="ibm.svg" alt="">
+            <img src="intel.svg" alt="">
+            <img src="microsoft.svg" alt="">
+            <img src="nvidia.svg" alt="">
+            <img src="oracle.svg" alt="">
+            <img src="samsung.svg" alt="">
+            <img src="sap.svg" alt="">
+            <img src="technology.svg" alt="">
+            <img src="tencent.svg" alt="">
+            <img src="unity.svg" alt="">
+        </div>
+    </div>
+
+    
+</body>
+</html>
